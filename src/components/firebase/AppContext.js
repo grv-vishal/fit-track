@@ -58,7 +58,7 @@ function AuthProvider({children}){
       })
       .catch(error => {
 
-          if(error.code=='auth/invalid-credential'){
+          if(error.code==='auth/invalid-credential'){
             toast.error("Invalid Email or Password!");
           }
           else{
@@ -90,7 +90,7 @@ function AuthProvider({children}){
         }
       }
       catch(error){
-        if(error.code == 'auth/email-already-in-use'){
+        if(error.code === 'auth/email-already-in-use'){
           toast.error("Email-already-in-use");
         } 
         else {
