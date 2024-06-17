@@ -4,7 +4,7 @@ const SliderCard = ({activeSlide}) => {
   return (
     <div className="w-full relative flex flex-col justify-center items-center">
           <div className="w-full opacity-80 rounded-md border">
-            <img src={activeSlide.url} loading='lazy' className="w-full h-auto"/>
+            <img src={activeSlide.url} loading='lazy' alt="slide" className="w-full h-auto"/>
           </div>
           <div className="absolute flex flex-col gap-1 md:gap-4 top-0 left-0 pl-14 md:pt-5 lg:pt-20">
             <p className="font-semibold md:font-bold text-xl sm:text-4xl lg:text-6xl text-white uppercase text-center pt-8 ">{activeSlide.title1}</p>

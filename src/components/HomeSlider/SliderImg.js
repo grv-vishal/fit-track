@@ -2,7 +2,8 @@ import slide1 from './slide1.jpg'
 import slide2 from './slide2.jpg'
 import slide5 from './slide5.jpg'
 
-export default[
+
+const SliderImg=[
      {
         title1:"Real Fitness",
         title2:"Depends on Exercise",
@@ -22,3 +23,5 @@ export default[
         url:slide5,
      },
 ];
+
+export default SliderImg;
