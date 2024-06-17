@@ -117,7 +117,7 @@ const retrieveActiveDays = () => {
 
 useEffect(() => {
     retrieveData();
-}, [selectedDay]);
+}, [retrieveData]);
 
 /*** EDIT AN ACTIVITY ***/
 const [editing, setEditing] = useState(false);
