@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useCallback} from 'react'
 import moment from 'moment';
 import { database } from '../firebase/FirebaseConfig';
 import { ref,query, orderByChild, equalTo, onValue } from 'firebase/database';
@@ -70,50 +70,45 @@ const [activities, setActivities] = useState(true);
 const [loading, setLoading] = useState([]);
 const [activeDays, setActiveDays] = useState([]);
 
-const retrieveData = () => {
-    
+const retrieveData = useCallback(() => {
     let queryDate = `${selectedDay.day}-${selectedDay.month}-${selectedDay.year}`;
 
-     let refData = ref(database, `Users/${authUser.uid}/activities`);
-     let queryRef = query(refData, orderByChild('date'), equalTo(queryDate));
-     onValue(queryRef, snapshot => {
+    let refData = ref(database, `Users/${authUser.uid}/activities`);
+    let queryRef = query(refData, orderByChild('date'), equalTo(queryDate));
+    onValue(queryRef, snapshot => {
       let data = snapshot.val();
       setActivities(data ? data : {});
       setLoading(false);
-
-      //setEditing(false)
     });
 
     // Update active days
     retrieveActiveDays();
-};
+  }, [authUser.uid, selectedDay, retrieveActiveDays]);
 
-const retrieveActiveDays = () => {
+
+const retrieveActiveDays = useCallback(() => {
     let refData = ref(database, `Users/${authUser.uid}/activities`);
     onValue(refData, snapshot => {
-        let data = snapshot.val();
-        if(data){
-          const values = Object.values(data);
-          // Store all active day/month combinations in array for calendar
-          const arr = values.map(obj => {
-            if(obj.date){
-              return obj.date.length === 8
-              ? obj.date.slice(0,3)
-              : obj.date.slice(0,4)
-
-            }
-            else
-             return '';
-              
-          }).filter(date=> date!=='');
-          console.log(arr);
-          setActiveDays(arr);
-        }
-        else
-         setActiveDays([]);
-        
+      let data = snapshot.val();
+      if (data) {
+        const values = Object.values(data);
+        // Store all active day/month combinations in array for calendar
+        const arr = values.map(obj => {
+          if (obj.date) {
+            return obj.date.length === 8
+              ? obj.date.slice(0, 3)
+              : obj.date.slice(0, 4)
+          } else {
+            return '';
+          }
+        }).filter(date => date !== '');
+        console.log(arr);
+        setActiveDays(arr);
+      } else {
+        setActiveDays([]);
+      }
     });
-}
+  }, [authUser.uid]);
 
 useEffect(() => {
     retrieveData();
