@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <div>
       <Template
-      title="Welcome Back"
+      title="Welcome Back !"
       desc="Tough times don’t last. Tough people do."
       img={loginimg}
       formType="login"

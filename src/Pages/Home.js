@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 
 const Home = () => {
   return (
-    <div className="w-[100vw] flex flex-col bg-redPink-5">
+    <div className="max-w-[100vw] flex flex-col bg-redPink-5">
       <Slider/>
       <Footer/>
     </div>

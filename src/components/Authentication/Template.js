@@ -8,10 +8,10 @@ const Template = ({title,desc,img,formType}) => {
 
   const contextValue=useContext(AppContext);
   return (
-    <div className='flex h-[100%] justify-between w-11/12 max-w-[1160px] py-12 mx-auto gap-x-12 gap-y-0'>
-      <div className='w-11/12 max-w-[450px]'>
-        <p className='text-redPink-1 text-4xl font-bold leading-[2.375rem]'>{title}</p>
-        <p className='text-gray-400 text-xl leading[1.625rem] mt-4'>{desc}</p>
+    <div className='flex h-screen justify-between items-center w-11/12 max-w-[1160px] py-12 mx-auto gap-x-12'>
+      <div className='w-11/12 max-w-[500px]'>
+        <p className='text-redPink-1 text-3xl sm:text-4xl font-bold leading-[2.375rem]'>{title}</p>
+        <p className='text-gray-500 text-xl leading[1.625rem] mt-4'>{desc}</p>
         
         {formType==="login"?
         (<LoginForm/>):
@@ -29,13 +29,12 @@ const Template = ({title,desc,img,formType}) => {
         </button>
       </div>
         
-      <div className="relative w-11/12 max-w-[450px] ">
+      <div className="hidden md:flex w-11/12">
             <img src={img} 
                 alt="Students"
-                width={558}
-                height={490}
+                width={650}
+                height={550}
                 loading="lazy"
-                className='absolute -top-4 right-4'
                  />
       </div>
 

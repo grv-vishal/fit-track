@@ -22,7 +22,7 @@ function App() {
     <div className=" relative w-[100vw] h-[100vh] overflow-x-hidden">
        
          <NavBar/>
-      <div className={`${openDrawer==true ? "flex flex-row relative" : ""}`}>
+      <div className={`${openDrawer==true ? "flex flex-row relative lg:flex-grow lg:ml-64" : ""}`}>
         {openDrawer &&
           <Drawer/>
         }

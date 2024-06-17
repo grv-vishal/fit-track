@@ -71,21 +71,23 @@ const LoginForm = () => {
           (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>):
           (<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)}
          </span>
-   
-         <Link to="">
-           <p className='text-blueLight-azure text-[14px] absolute left-[6px] mt-2' onClick={()=>setOpen(true)}>
-            Forgot Password
-           </p>
-         </Link>
-
-         <Link to="/signup">
-           <p className='text-[#7ab4e3] text-[15px] absolute right-[6px] mt-2'>
-            Don't have an account? Sign Up
-           </p>
-         </Link>
         </label> 
 
-        <button className='bg-redPink-8 mt-10 py-2 rounded-md font-medium'>
+        <div className='flex flex-col gap-y-4 sm:flex-row sm:justify-between -mt-3 mx-1'>
+          <Link to="">
+            <p className='text-blueLight-azure text-[14px]' onClick={()=>setOpen(true)}>
+             Forgot Password
+            </p>
+          </Link>
+
+          <Link to="/signup">
+            <p className='text-[#7ab4e3] text-[15px] text-center'>
+             Don't have an account? Sign Up
+            </p>
+          </Link>
+        </div>
+
+        <button className='bg-redPink-8 mt-2 sm:mt-5 py-2 rounded-md font-medium'>
           Sign In
         </button>
       </form>

@@ -6,7 +6,7 @@ const Signup = () => {
   return (
     <div>
       <Template
-      title="Join the millions learnings to exercise and track daily"
+      title="Join the millions learnings to exercise and track daily !"
       desc="The best project you will ever work on is you."
       img={loginimg}
       formType="signin"

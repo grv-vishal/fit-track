@@ -107,7 +107,7 @@ const SignupForm = () => {
               name="password"
               value={formData.password}
               onChange={changeHandler}
-              placeholder="Enter Password" 
+              placeholder="Password" 
               className='bg-[#e7eef1] py-3 px-2 w-full rounded-md text-black'
             />
 
@@ -128,7 +128,7 @@ const SignupForm = () => {
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={changeHandler}
-              placeholder="Confirm Password" 
+              placeholder="Confirm" 
               className='bg-[#e7eef1] py-3 px-2 w-full rounded-md text-black'
             />
 
