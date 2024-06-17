@@ -10,13 +10,6 @@ const SignupForm = () => {
 
   const formData=contextValue.signUpData;
   const setFormData=contextValue.setSignUpData;
-  const initialUser={
-    firstName:"",
-    lastName:"",
-    email:"",
-    password:"",
-    confirmPassword:"",
-  }
 
 
   const[showPassword,setShowPassword]=useState(false);

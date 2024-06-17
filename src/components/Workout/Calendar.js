@@ -1,10 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import moment from 'moment';
-import {auth, database } from '../firebase/FirebaseConfig';
+import { database } from '../firebase/FirebaseConfig';
 import { ref,query, orderByChild, equalTo, onValue } from 'firebase/database';
 
-import { Grid } from '@mui/material';
-import Paper from '@mui/material/Paper';
 import Snackbar from '@mui/material/Snackbar';
 
 

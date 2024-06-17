@@ -8,15 +8,9 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 
-import { AppContext } from './firebase/AppContext';
-import { Link } from 'react-router-dom';
-
-
 
 export default function AccountMenu() {
   
-  const contextValue=useContext(AppContext);
-
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
