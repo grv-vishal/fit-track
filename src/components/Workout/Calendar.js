@@ -70,21 +70,6 @@ const [activities, setActivities] = useState(true);
 const [loading, setLoading] = useState([]);
 const [activeDays, setActiveDays] = useState([]);
 
-const retrieveData = useCallback(() => {
-    let queryDate = `${selectedDay.day}-${selectedDay.month}-${selectedDay.year}`;
-
-    let refData = ref(database, `Users/${authUser.uid}/activities`);
-    let queryRef = query(refData, orderByChild('date'), equalTo(queryDate));
-    onValue(queryRef, snapshot => {
-      let data = snapshot.val();
-      setActivities(data ? data : {});
-      setLoading(false);
-    });
-
-    // Update active days
-    retrieveActiveDays();
-  }, [authUser.uid, selectedDay, retrieveActiveDays]);
-
 
 const retrieveActiveDays = useCallback(() => {
     let refData = ref(database, `Users/${authUser.uid}/activities`);
@@ -109,6 +94,22 @@ const retrieveActiveDays = useCallback(() => {
       }
     });
   }, [authUser.uid]);
+
+const retrieveData = useCallback(() => {
+    let queryDate = `${selectedDay.day}-${selectedDay.month}-${selectedDay.year}`;
+
+    let refData = ref(database, `Users/${authUser.uid}/activities`);
+    let queryRef = query(refData, orderByChild('date'), equalTo(queryDate));
+    onValue(queryRef, snapshot => {
+      let data = snapshot.val();
+      setActivities(data ? data : {});
+      setLoading(false);
+    });
+
+    // Update active days
+    retrieveActiveDays();
+  }, [authUser.uid, selectedDay, retrieveActiveDays]);
+
 
 useEffect(() => {
     retrieveData();
