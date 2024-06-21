@@ -44,6 +44,8 @@ const CalendarBody = (props) => {
         // Check if day is today
         if (currentDay() === d && currentMonth() === actualMonth()) currDay = 'bg-black text-white';
         console.log(currentDay());
+        console.log(actualMonth());
+        
 
         // Check if day is selected day
         if (selectedDay.day === d && currentMonthNum() === selectedDay.month) selectDay = 'text-white bg-blueLight-sky3 shadow-md';
@@ -55,7 +57,7 @@ const CalendarBody = (props) => {
         monthDays.push(
             <div
                 key={d}
-                className={`py-1 cursor-pointer ${currDay} ${selectDay} ${activeDay}`}
+                className={`py-1 cursor-pointer ${currDay} ${selectDay} ${activeDay}`} 
                 onClick={() => setSelectedDay(d)}
             >
                 {d}

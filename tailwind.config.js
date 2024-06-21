@@ -24,8 +24,33 @@ module.exports = {
           royal: "#4a76fd",
         },
      },
-   },
-  },
-  plugins: [],
-}
 
+     keyframes: {
+        slideInL: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        slideOutL: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        slideInR:{
+           '0%': { transform: 'translateX(-100%)' },
+           '100%': { transform: 'translateX(0)' },
+        },
+        slideOutR:{
+           '0%': { transform: 'translateX(0)' },
+           '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+
+      animation: {
+        slideInL: 'slideInL 0.5 ease-in-out',
+        slideOutL: 'slideOutL 0.5s ease-in-out',
+        slideInR:'slideInR 0.5s ease-in-out',
+        slideOutR:'slideInR 0.5s ease-in-out',
+      },
+    },
+   },
+  plugins: [],
+};

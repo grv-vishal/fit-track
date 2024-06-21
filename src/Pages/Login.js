@@ -1,6 +1,7 @@
 import React from 'react'
 import Template from '../components/Authentication/Template'
 import loginimg from '../assets/login.jpg'
+import Footer from '../components/Footer'
 
 const Login = () => {
   return (
@@ -11,6 +12,7 @@ const Login = () => {
       img={loginimg}
       formType="login"
       />
+      <Footer/>
     </div>
   )
 }

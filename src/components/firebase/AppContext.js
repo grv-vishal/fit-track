@@ -16,6 +16,7 @@ function AuthProvider({children}){
 
     const[openDrawer,setOpenDrawer]=useState(false);
     const[authData,setAuthData]=useState(null);
+    const[openContact,setOpenContact]=useState(false);
 
     useEffect(() =>{
       const unlisten =onAuthStateChanged(auth,async (authUser) =>{
@@ -173,6 +174,8 @@ function AuthProvider({children}){
         setAuthData,
         addActivity,
         updateActivity,
+        openContact,
+        setOpenContact,
     };
 
     return (

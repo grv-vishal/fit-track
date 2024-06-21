@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SliderCard = ({activeSlide}) => {
+const SliderCard = ({activeSlide,animationClass}) => {
   return (
-    <div className="w-full relative flex flex-col justify-center items-center">
+    <div className={`w-full relative flex flex-col justify-center items-center ${animationClass}`}>
           <div className="w-full opacity-80 rounded-md border">
             <img src={activeSlide.url} loading='lazy' alt="slide" className="w-full h-auto"/>
           </div>

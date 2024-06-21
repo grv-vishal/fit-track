@@ -75,9 +75,15 @@ const EditActivity = (props) => {
                         name="type"
                         onChange={handleChange}
                     >
-                        <MenuItem value={1}>Lifting Weights</MenuItem>
-                        <MenuItem value={2}>Running</MenuItem>
-                        <MenuItem value={3}>Cycling</MenuItem>
+                        <MenuItem value={1}>Cardio</MenuItem>
+                        <MenuItem value={2}>Chest</MenuItem>
+                        <MenuItem value={3}>Triceps</MenuItem>
+                        <MenuItem value={4}>Back</MenuItem>
+                        <MenuItem value={5}>Biceps</MenuItem>
+                        <MenuItem value={6}>Leg</MenuItem>
+                        <MenuItem value={7}>Shoulder</MenuItem>
+                        <MenuItem value={8}>Cycling</MenuItem>
+                        <MenuItem value={9}>Yoga</MenuItem>
                     </Select>
                 </div>
                 <Typography id="discrete-slider" gutterBottom>

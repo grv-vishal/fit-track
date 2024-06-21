@@ -1,11 +1,13 @@
 import React from 'react'
 import Slider from '../components/HomeSlider/Slider'
 import Footer from '../components/Footer'
+import Content from '../components/HomeContent/Content'
 
 const Home = () => {
   return (
-    <div className="max-w-[100vw] flex flex-col bg-redPink-5">
+    <div className="max-w-[100vw] flex flex-col">
       <Slider/>
+      <Content/>
       <Footer/>
     </div>
   )

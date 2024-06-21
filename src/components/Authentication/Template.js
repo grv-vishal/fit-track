@@ -9,9 +9,9 @@ const Template = ({title,desc,img,formType}) => {
   const contextValue=useContext(AppContext);
   return (
     <div className='flex h-screen justify-between items-center w-11/12 max-w-[1160px] py-12 mx-auto gap-x-12'>
-      <div className='w-11/12 max-w-[500px]'>
+      <div className='w-11/12 max-w-[500px] mx-auto'>
         <p className='text-redPink-1 text-3xl sm:text-4xl font-bold leading-[2.375rem]'>{title}</p>
-        <p className='text-gray-500 text-xl leading[1.625rem] mt-4'>{desc}</p>
+        <p className='text-gray-800 text-xl leading[1.625rem] mt-4 font-serif'>{desc}</p>
         
         {formType==="login"?
         (<LoginForm/>):

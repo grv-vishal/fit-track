@@ -3,7 +3,6 @@ import NavBar from './components/NavBar';
 import React from 'react';
 import { Route,Routes } from 'react-router-dom';
 import Home from './Pages/Home'
-import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Login from './Pages/Login'
 import Signup from './Pages/Signup'
@@ -12,6 +11,9 @@ import DashBoard from './Pages/DashBoard';
 import Drawer from './components/Drawer';
 import { useContext } from 'react';
 import { AppContext } from './components/firebase/AppContext';
+import Workout from './Pages/Workout';
+import Nutrition from './Pages/Nutrition';
+import MentalHealth from './Pages/MentalHealth';
 
 
 function App() {
@@ -29,10 +31,11 @@ function App() {
   
         <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/contact' element={<Contact/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
+        <Route path='/workout' element={<Workout/>}/>
+        <Route path='/nutrition' element={<Nutrition/>}/>
+        <Route path='/health' element={<MentalHealth/>}/>
         <Route path='/dashboard' element={
           <PrivateRoute>
             <DashBoard/>

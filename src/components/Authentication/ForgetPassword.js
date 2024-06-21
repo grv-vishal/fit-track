@@ -11,8 +11,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import Snackbar from '@mui/material/Snackbar';
 
 
-
-
 const ForgetPassword = ({open,setOpen}) => {
 
     const[openAlert,setOpenAlert]=useState(false);
