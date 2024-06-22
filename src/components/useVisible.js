@@ -8,14 +8,13 @@ function useVisible(ref) {
       setIntersecting(entry.isIntersecting);
     });
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+  
+    observer.observe(ref.current);
+    
 
     return () => {
-      if (ref.current) {
-        observer.disconnect();
-      }
+      observer.disconnect();
+      
     };
   }, [ref]);
 
