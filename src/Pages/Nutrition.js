@@ -1,6 +1,5 @@
 import React from 'react'
-import img from '../components/HomeContent/nutrition.jpg';
-import Footer from '../components/Footer';
+
 
 const Nutrition = () => {
   return (
