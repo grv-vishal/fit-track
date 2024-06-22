@@ -2,7 +2,7 @@ import React,{useContext,useRef} from 'react'
 import { Link } from 'react-router-dom'
 import Card from './Card'
 import { AppContext } from '../firebase/AppContext'
-import useVisible from './useVisible';
+import useVisible from '../useVisible';
 
 const Content = () => {
     const{loginState} =useContext(AppContext);
@@ -18,8 +18,8 @@ const Content = () => {
 
 
   return (
-    <div className='w-full mt-5'>
-        <div className='flex flex-col justify-center items-center gap-y-3 sm:gap-y-5 py-6 '>
+    <div className='w-full'>
+        <div className='flex flex-col justify-center items-center gap-y-3 sm:gap-y-5 py-6 bg-white'>
             <div className='flex flex-wrap justify-center items-center  gap-y-1 sm:gap-y-3 gap-x-2 mx-2 text-redPink-2 
             text-3xl min-[490px]:text-[42px] min-[990px]:text-5xl font-bold'>
                 <p>Track Your Workouts,</p> 
@@ -39,15 +39,15 @@ const Content = () => {
 
         <div className='flex flex-wrap justify-center items-center gap-y-8 gap-x-5 max-w-[1280px] mx-auto mt-6'>
             <Link to="/workout">
-               <Card index={0} ref={ref1} className={`transition-transform ease-in-out duration-500 ${isVisible1 ? "translate-y-0 opacity-100 hover:scale-110" : "translate-y-44 opacity-0"}`}/>
+               <Card index={0} ref={ref1} className={`transition-transform ease-in-out duration-500 ${isVisible1 ? "translate-y-0 opacity-100 hover:scale-110" : "translate-y-32 opacity-0"}`}/>
             </Link>
 
             <Link to="/nutrition">
-               <Card index={1} ref={ref2} className={`transition-transform ease-in-out duration-500 ${isVisible2 ? "translate-y-0 opacity-100 hover:scale-110" : "translate-y-44 opacity-0"}`}/>
+               <Card index={1} ref={ref2} className={`transition-transform ease-in-out duration-500 ${isVisible2 ? "translate-y-0 opacity-100 hover:scale-110" : "translate-y-32 opacity-0"}`}/>
             </Link>
 
             <Link to="/health">
-               <Card index={2} ref={ref3}className={`transition-transform ease-in-out duration-500 ${isVisible3 ? "translate-y-0 opacity-100 hover:scale-110" : "translate-y-44 opacity-0"}`} />
+               <Card index={2} ref={ref3}className={`transition-transform ease-in-out duration-500 ${isVisible3 ? "translate-y-0 opacity-100 hover:scale-110" : "translate-y-32 opacity-0"}`} />
             </Link>
             
         </div>

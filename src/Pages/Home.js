@@ -5,7 +5,7 @@ import Content from '../components/HomeContent/Content'
 
 const Home = () => {
   return (
-    <div className="max-w-[100vw] flex flex-col">
+    <div className="max-w-[100vw] flex flex-col bg-gray-100">
       <Slider/>
       <Content/>
       <Footer/>
