@@ -1,6 +1,6 @@
 import React from 'react'
 import Template from '../components/Authentication/Template'
-import loginimg from '../assets/login.jpg'
+import loginimg from '../assets/loginimg.jpg'
 import Footer from '../components/Footer'
 
 const Login = () => {

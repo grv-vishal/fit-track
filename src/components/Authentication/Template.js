@@ -29,7 +29,7 @@ const Template = ({title,desc,img,formType}) => {
         </button>
       </div>
         
-      <div className="hidden md:flex w-11/12">
+      <div className="hidden md:flex w-11/12 drop-shadow-xl">
             <img src={img} 
                 alt="Students"
                 width={650}

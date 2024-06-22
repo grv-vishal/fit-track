@@ -1,11 +1,11 @@
 import React from 'react'
-import img from '../components/HomeContent/workout.jpg';
+import img from '../components/HomeContent/home_workout.jpg';
 import Footer from '../components/Footer';
 
 const Workout = () => {
   return (
     <div className='w-full mt-4'>
-        <h1 className='text-3xl md:text-5xl font-bold text-black text-center mt-8 mb-12'>5 Effective Home Workouts to Stay Fit</h1>
+        <h1 className='text-3xl md:text-5xl font-bold text-black text-center mt-8 mb-12 px-4'>5 Effective Home Workouts to Stay Fit</h1>
         
         <div className='max-w-[1080px] mx-auto px-4 '>
             <img src={img} alt="" />

@@ -3,7 +3,6 @@ import NavBar from './components/NavBar';
 import React from 'react';
 import { Route,Routes } from 'react-router-dom';
 import Home from './Pages/Home'
-import Contact from './Pages/Contact'
 import Login from './Pages/Login'
 import Signup from './Pages/Signup'
 import PrivateRoute from './components/PrivateRoute';

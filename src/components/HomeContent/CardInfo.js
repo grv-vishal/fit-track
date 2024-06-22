@@ -1,4 +1,3 @@
-import React from "react";
 import workout from './workout.jpg'
 import nutrition from './nutrition.jpg'
 import health from './mental_health.jpg'
