@@ -8,16 +8,16 @@ import Contact from '../Pages/Contact';
 
 
 const NavBar = () => {
-    const{loginState,setOpenDrawer,openDrawer,setOpenContact}=useContext(AppContext);
+    const{loginState,setOpenDrawer,openDrawer,setOpenContact,scrollToSection,sectionRef}=useContext(AppContext);
 
   return (
 
     <div className='sticky top-0 z-50'>
-      <div className=" flex justify-between px-4 min-[600px]:px-6 items-center py-3 bg-redPink-1 shadow-lg">
+      <div className= {`flex px-4 min-[600px]:px-6 items-center py-3 bg-redPink-1 shadow-lg ${loginState ? "justify-between" : "min-[900px]:justify-evenly justify-between"} `}>
 
         <div className="flex flex-row justify-center items-center gap-x-5"> 
 
-         <button className={`${loginState ? "flex flex-col gap-y-2" : "flex flex-col gap-y-2 min-[720px]:hidden"}`} onClick={()=>{
+         <button className={`${loginState ? "flex flex-col gap-y-2" : "flex flex-col gap-y-2 min-[900px]:hidden"}`} onClick={()=>{
           if(openDrawer)
             setOpenDrawer(false)
           else
@@ -40,15 +40,26 @@ const NavBar = () => {
 
 
        <nav>
-        <ul className="hidden min-[720px]:flex justify-center items-center gap-5 text-2xl font-semibold text-white">
+        <ul className="hidden min-[900px]:flex justify-center items-center gap-4 lg:gap-5 text-[22px] lg:text-2xl font-semibold text-white">
            <li>
             <Link to="/">Home</Link>
+           </li>
+           <li>
+            <Link to="">Exercises</Link>
+           </li>
+           <li>
+            <Link to="/">
+            <button onClick={()=>scrollToSection(sectionRef)}>
+              Blog
+            </button>
+            </Link>
            </li>
            <li>
             <button onClick={()=>setOpenContact(true)}>
                 Contact
             </button>
            </li>
+           
         </ul>
        </nav>
 

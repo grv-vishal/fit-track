@@ -128,8 +128,8 @@ const editActivity = (activity, i) => {
 
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3">
-            <div className="md:col-span-2 my-4">
+    <div className="grid grid-cols-1 min-[1100px]:grid-cols-3">
+            <div className="min-[1100px]:col-span-2 my-4">
                     <CalendarHead
                         allMonths={allMonths}
                         currentMonth={currentMonth}
@@ -178,7 +178,7 @@ const editActivity = (activity, i) => {
                             </>
                     }
             </div>
-            <div className='flex flex-col justify-center gap-y-3 md:col-span-2 m-3 p-4 '>  
+            <div className='flex flex-col justify-center gap-y-3 min-[1100px]:col-span-2 m-3 p-4 '>  
                 <h3 className="text-xl font-semibold pl-3 py-2 shadow-md">Activities on {selectedDay.day}-{selectedDay.month + 1}</h3>
                 <ActivityList
                     loading={loading}

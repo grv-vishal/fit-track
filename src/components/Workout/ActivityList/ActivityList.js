@@ -20,6 +20,9 @@ const ActivityList = (props) => {
           duration: null,
           type: null,
           name: null,
+          reps:null,
+          sets:null,
+          weight:null,
      };
 
      updateActivity(props.authUser.uid, emptyActivity, activityKey);
@@ -45,16 +48,21 @@ const ActivityList = (props) => {
           ? <p>No activities added yet.</p>
           :
           <div className='flex flex-col justify-center gap-y-2 p-3 shadow-md'>     
-            <div className='grid grid-cols-4 justify-center font-semibold pb-2 border-b-2 text-[16px]'>
-              <div>Name</div>
-              <div>Type</div>
-              <div>Duration</div>
-              <div>Actions</div>
+            <div className='grid grid-cols-1 min-[540px]:grid-cols-7 gap-2 justify-center items-center font-semibold pb-2 border-b-2 text-[16px]'>
+              <div className='grid  grid-cols-5 min-[540px]:grid-cols-6 justify-center items-center col-span-5 min-[540px]:col-span-6 gap-x-1'>
+               <div>Name</div>
+               <div>Type</div>
+               <div>Reps</div>
+               <div>Sets</div>
+               <div>Weight</div>
+               <div className='hidden min-[540px]:grid'>Duration</div>
+              </div>     
+              <div className='hidden min-[540px]:grid'>Actions</div>
             </div> 
             
               {
                 Object.values(activities).map((activity, i) => {
-                    let {name, type, duration} = activity;
+                    let {name, type,reps,sets,weight, duration} = activity;
                     switch(activity.type) {
                         case 1:
                                   type = "Cardio";
@@ -90,17 +98,24 @@ const ActivityList = (props) => {
                                   type = "Not set";
                     };
                     return (
-                          <div className='grid grid-cols-4 justify-center items-center pb-2'>
+                          <div className='grid grid-cols-1 min-[540px]:grid-cols-7 justify-center items-center pb-2'>
+                                <div className='grid grid-cols-5 min-[540px]:grid-cols-6 justify-center items-center col-span-5 min-[540px]:col-span-6 gap-x-1'>
                                   <div>{name}</div>
                                   <div>{type}</div>
-                                  <div>{duration}</div>
-                                  <div >
+                                  <div>{reps}</div>
+                                  <div>{sets}</div>
+                                  <div>{weight} kg</div>
+                                  <div className='hidden min-[540px]:grid'>{duration} min</div>
+                                </div>
+                                  
+                                  <div className='flex justify-center items-center gap-x-2 py-4' >
                                       <DeleteIcon 
                                           onClick={e => deleteActivity(i)}
+                                          style={{cursor:"pointer"}}
                                       />
                                       <EditIcon
                                           onClick={e => editActivity(activity, i)}
-                                          style={{marginLeft:"20px"}}
+                                          style={{cursor:"pointer"}}
                                       />
                                   </div>
                           </div>

@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState,useRef } from "react";
 import {auth,database} from './FirebaseConfig';
 import toast from 'react-hot-toast';
 import { GoogleAuthProvider,signInWithPopup,signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword,onAuthStateChanged} from "firebase/auth";
@@ -155,6 +155,13 @@ function AuthProvider({children}){
       update(userRef,activity);
    }
 
+
+   //same page navigation
+   const sectionRef=useRef(null);
+   const scrollToSection = (sectionRef) => {
+    sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+   };
+
     const value={
         loginState,
         setloginState,
@@ -176,6 +183,8 @@ function AuthProvider({children}){
         updateActivity,
         openContact,
         setOpenContact,
+        sectionRef,
+        scrollToSection,
     };
 
     return (

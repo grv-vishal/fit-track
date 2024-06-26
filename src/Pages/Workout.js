@@ -4,20 +4,20 @@ import Footer from '../components/Footer';
 
 const Workout = () => {
   return (
-    <div className='w-full mt-4'>
-        <h1 className='text-3xl md:text-5xl font-bold text-black text-center mt-8 mb-12 px-4'>5 Effective Home Workouts to Stay Fit</h1>
+    <div className='w-full mt-4 md:mt-32'>
+        <h1 className='text-3xl md:text-5xl font-bold text-black text-center mt-8 mb-12 md:mb-28 px-4'>5 Effective Home Workouts to Stay Fit</h1>
         
         <div className='max-w-[1080px] mx-auto px-4 '>
-            <img src={img} alt="" />
+          <img src={img} alt="" className='rounded-lg' />
 
-            <div className='my-8 px-3'> 
-             <p className='text-lg md:text-xl text-black'>Staying fit doesn't require a gym membership or expensive equipment.
+          <div className='text-lg min-[400px]:text-xl my-8 px-2'> 
+             <p>Staying fit doesn't require a gym membership or expensive equipment.
               With the right exercises, you can achieve your fitness goals from the comfort of your own home. 
               Here are five effective home workouts to help you stay in shape:
              </p>
-             <div className='my-6 text-lg text-black'>
-                <h2 className='text-xl font-bold'>1. Bodyweight Exercises</h2>
-                <p className='px-2 my-4 '>Bodyweight exercises are a great way to build strength and improve your fitness without any equipment.
+            <div className='my-6'>
+                <h2 className='text-2xl font-bold'>1. Bodyweight Exercises</h2>
+                <p className='my-2 '>Bodyweight exercises are a great way to build strength and improve your fitness without any equipment.
                  Here are a few key exercises to include in your routine:
                 </p>
                 <ol className='my-4 pl-10 list-disc'>
@@ -46,9 +46,9 @@ const Workout = () => {
                 </ul>
             </div>
 
-            <div className='text-lg my-6'>
-            <h2 className='text-xl font-bold'>2. High-Intensity Interval Training (HIIT)</h2>
-                <p className='px-2 my-4 '>HIIT involves short bursts of intense exercise followed by brief periods of rest. This workout is great for burning calories and improving cardiovascular fitness. 
+            <div className='my-6'>
+            <h2 className='text-2xl font-bold'>2. High-Intensity Interval Training (HIIT)</h2>
+                <p className='my-2 '>HIIT involves short bursts of intense exercise followed by brief periods of rest. This workout is great for burning calories and improving cardiovascular fitness. 
                     Here’s a sample HIIT workout you can try at home:
                 </p>
                 <ol className='my-4 pl-10 list-disc'>
@@ -83,9 +83,9 @@ const Workout = () => {
             </div>
 
 
-            <div className='my-6 text-lg text-black'>
-                <h2 className='text-xl font-bold'>3. Yoga</h2>
-                <p className='px-2 my-4 '>Yoga is excellent for improving flexibility, strength, and mental well-being. There are many free online resources and apps that offer guided yoga sessions for all levels. 
+            <div className='my-6'>
+                <h2 className='text-2xl font-bold'>3. Yoga</h2>
+                <p className='my-2 '>Yoga is excellent for improving flexibility, strength, and mental well-being. There are many free online resources and apps that offer guided yoga sessions for all levels. 
                     Key poses to include in your practice are:
                 </p>
                 <ol className='my-4 pl-10 list-disc'>
@@ -111,9 +111,9 @@ const Workout = () => {
             </div>
 
 
-            <div className='my-6 text-lg text-black'>
-                <h2 className='text-xl font-bold'>4. Resistance Band Workouts</h2>
-                <p className='px-2 my-4 '>Resistance bands are inexpensive and versatile tools that can add variety to your workouts. 
+            <div className='my-6'>
+                <h2 className='text-2xl font-bold'>4. Resistance Band Workouts</h2>
+                <p className='my-2 '>Resistance bands are inexpensive and versatile tools that can add variety to your workouts. 
                     They’re great for strength training and can be used to target different muscle groups. Here’s a simple routine:
                 </p>
                 <ol className='my-4 pl-10 list-disc'>
@@ -139,9 +139,9 @@ const Workout = () => {
             </div>
 
 
-            <div className='my-6 text-lg text-black'>
-                <h2 className='text-xl font-bold'>5. Cardio Workouts</h2>
-                <p className='px-2 my-4 '>Cardio exercises are crucial for heart health and overall fitness. You don’t need a treadmill to get your heart rate up. 
+            <div className='my-6'>
+                <h2 className='text-2xl font-bold'>5. Cardio Workouts</h2>
+                <p className='my-2 '>Cardio exercises are crucial for heart health and overall fitness. You don’t need a treadmill to get your heart rate up. 
                     Here are a few effective cardio exercises you can do at home:
                 </p>
                 <ol className='my-4 pl-10 list-disc'>
@@ -165,16 +165,18 @@ const Workout = () => {
                     <li>10 minutes of stair climbing</li>
                 </ul>
             </div>
-         </div>
 
-         <div className='my-6 px-2'>
-            <p className='font-bold text-2xl py-2'>Conclusion</p>
-            <p className='text-lg'>Staying fit at home is not only possible but also convenient and cost-effective. 
+            <div className='my-6 px-2'>
+              <p className='font-bold text-2xl py-2'>Conclusion</p>
+              <p>Staying fit at home is not only possible but also convenient and cost-effective. 
                 By incorporating these five effective workouts into your routine, you can maintain your fitness and health without leaving your house. 
                 Remember to start at your own pace and gradually increase the intensity as you get stronger. 
                 Stay consistent, stay motivated, and enjoy your home workouts!
-            </p>
+              </p>
+           </div>
          </div>
+
+         
             
         </div>
         <Footer/>
