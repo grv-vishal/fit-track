@@ -53,7 +53,7 @@ const Content = () => {
           <div className='bg-white flex flex-col justify-center items-center gap-y-8 px-10 py-16 mt-4 drop-shadow-md mx-4'>
             <div className='flex flex-col min-[880px]:flex-row justify-evenly items-center gap-x-2 gap-y-4'>
              <div>
-              <img src={loginphone} alt="" className='w-[200px] min-[400px]:w-[250px] min-[550px]:w-[300px] min-[1280px]:w-[400px] h-[250px] min-[400px]:h-[300px] min-[550px]:h-[400px] min-[1280px]:h-[500px] hover:scale-105 transition-all duration-300'/>
+              <img src={loginphone} alt="" loading='lazy' className='w-[200px] min-[400px]:w-[250px] min-[550px]:w-[300px] min-[1280px]:w-[400px] h-[250px] min-[400px]:h-[300px] min-[550px]:h-[400px] min-[1280px]:h-[500px] hover:scale-105 transition-all duration-300'/>
              </div>
              <div className='max-w-[450px] text-black flex flex-col justify-center items-start'>
               <h4 className='font-semibold text-[16px] min-[400px]:text-[18px] uppercase text-gray-700'>User Authentication</h4>
@@ -76,7 +76,7 @@ const Content = () => {
              </div>
 
              <div>
-              <img src={dashboard} alt="" className='w-[200px] min-[400px]:w-[250px] min-[550px]:w-[300px] min-[1280px]:w-[400px] h-[250px] min-[400px]:h-[300px] min-[550px]:h-[400px] min-[1280px]:h-[500px] hover:scale-105 transition-all duration-300'/>
+              <img src={dashboard} alt="" loading='lazy' className='w-[200px] min-[400px]:w-[250px] min-[550px]:w-[300px] min-[1280px]:w-[400px] h-[250px] min-[400px]:h-[300px] min-[550px]:h-[400px] min-[1280px]:h-[500px] hover:scale-105 transition-all duration-300'/>
              </div>
 
             </div>
