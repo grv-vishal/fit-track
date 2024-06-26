@@ -59,7 +59,7 @@ const Slider = () => {
               }}
               key={"circle" + i}
               className={`rounded-full w-3 h-3 sm:w-5 sm:h-5 cursor-pointer  ${
-                i == activeIndex ? "bg-white" : "bg-gray-500"
+                i === activeIndex ? "bg-white" : "bg-gray-500"
               }`}
             ></div>
           );
