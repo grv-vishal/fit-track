@@ -53,7 +53,7 @@ const Content = () => {
           <div className='bg-white flex flex-col justify-center items-center gap-y-8 px-10 py-16 mt-4 drop-shadow-md mx-4'>
             <div className='flex flex-col min-[880px]:flex-row justify-evenly items-center gap-x-2 gap-y-4'>
              <div>
-              <img src={loginphone} alt="" loading='lazy' className='w-[200px] min-[400px]:w-[250px] min-[550px]:w-[300px] min-[1280px]:w-[400px] h-[250px] min-[400px]:h-[300px] min-[550px]:h-[400px] min-[1280px]:h-[500px] hover:scale-105 transition-all duration-300'/>
+              <img src={loginphone} alt="" loading='lazy' className='w-[250px] sm:w-[300px] xl:w-[400px] h-[300px] sm:h-[400px] xl:h-[500px] hover:scale-105 transition-all duration-300'/>
              </div>
              <div className='max-w-[450px] text-black flex flex-col justify-center items-start'>
               <h4 className='font-semibold text-[16px] min-[400px]:text-[18px] uppercase text-gray-700'>User Authentication</h4>
@@ -65,18 +65,18 @@ const Content = () => {
              </div>
             </div>
 
-            <div className='flex flex-col-reverse min-[880px]:flex-row justify-evenly items-center gap-x-2 gap-y-4'>
+            <div className='flex flex-col-reverse [@media(min-width:880px)]:flex-row justify-evenly items-center gap-x-2 gap-y-4'>
              <div className='max-w-[450px] text-black flex flex-col justify-center items-start'>
               <h4 className='font-semibold text-[16px] min-[400px]:text-[18px] uppercase text-gray-700'>Real-Time Updates</h4>
               <h2 className='font-bold uppercase text-xl min-[400px]:text-[22px] min-[550px]:text-2xl pb-3'>Comprehensive Workout Logging</h2>
-              <p className='text-[15px] min-[400px]:text-[16px] min-[550px]:text-[18px]'>Allows users to log daily workouts with detailed exercises, sets, reps, and weights and
+              <p className='text-[15px] [@media(min-width:400px)]:text-[16px] [@media(min-width:550px)]:text-[18px]'>Allows users to log daily workouts with detailed exercises, sets, reps, and weights and
                 view summaries of their recent workouts and fitness goals,
                 ensuring that their personal data and workout informations are securely encrypted and stored.
               </p>
              </div>
 
              <div>
-              <img src={dashboard} alt="" loading='lazy' className='w-[200px] min-[400px]:w-[250px] min-[550px]:w-[300px] min-[1280px]:w-[400px] h-[250px] min-[400px]:h-[300px] min-[550px]:h-[400px] min-[1280px]:h-[500px] hover:scale-105 transition-all duration-300'/>
+              <img src={dashboard} alt="" loading='lazy' className='w-[250px] sm:w-[300px] xl:w-[400px] h-[300px] sm:h-[400px] xl:h-[500px] hover:scale-105 transition-all duration-300'/>
              </div>
 
             </div>

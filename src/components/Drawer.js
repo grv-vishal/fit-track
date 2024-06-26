@@ -26,7 +26,7 @@ const Drawer = () => {
 
            
             <Link to="/">
-                <button className='flex  flex-row min-[900px]:hidden justify-start pl-5 text-redPink-2 text-[18px] sm:text-xl font-semibold items-center gap-x-4 w-full py-2 hover:shadow-md hover:bg-redPink-5 transition-all duration-200'
+                <button className='flex  flex-row [@media(min-width:900px)]:hidden justify-start pl-5 text-redPink-2 text-[18px] sm:text-xl font-semibold items-center gap-x-4 w-full py-2 hover:shadow-md hover:bg-redPink-5 transition-all duration-200'
                 onClick={()=>setOpenDrawer(false)}>
                     <FaHome />
                     <p>Home</p>
@@ -44,7 +44,7 @@ const Drawer = () => {
 
             
             <Link to="">
-                <button className='flex min-[900px]:hidden justify-start pl-5 text-redPink-2 text-[18px] sm:text-xl font-semibold items-center gap-x-4 w-full py-2 hover:shadow-md hover:bg-redPink-5 transition-all duration-200'
+                <button className='flex [@media(min-width:900px)]:hidden justify-start pl-5 text-redPink-2 text-[18px] sm:text-xl font-semibold items-center gap-x-4 w-full py-2 hover:shadow-md hover:bg-redPink-5 transition-all duration-200'
                 onClick={()=>setOpenDrawer(false)}>
                     <RunCircleIcon/>
                    <p>Exercises</p>
@@ -54,7 +54,7 @@ const Drawer = () => {
             
             <div className='w-full h-[1px] bg-gray-400'></div>
 
-            <button className='flex  flex-row min-[900px]:hidden justify-start pl-5 text-redPink-2 text-[18px] sm:text-xl font-semibold items-center gap-x-4 w-full py-2 hover:shadow-md hover:bg-redPink-5 transition-all duration-200'
+            <button className='flex  flex-row [@media(min-width:900px)]:hidden justify-start pl-5 text-redPink-2 text-[18px] sm:text-xl font-semibold items-center gap-x-4 w-full py-2 hover:shadow-md hover:bg-redPink-5 transition-all duration-200'
                 onClick={()=>{
                     setOpenDrawer(false);
                     setOpenContact(true);

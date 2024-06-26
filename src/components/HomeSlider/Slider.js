@@ -39,11 +39,11 @@ const Slider = () => {
 
 
       <div className=" opacity-0 sm:opacity-100 absolute top-0 h-full w-full justify-between items-center flex text-white sm:px-10 text-3xl">
-        <button onClick={leftHandler} className="text-[42px] min-[930px]:text-6xl min-[1100px]:text-7xl text-gray-400 opacity-50 hover:text-6xl hover:sm:text-7xl hover:lg:text-8xl ease-in-out
+        <button onClick={leftHandler} className="text-[42px] [@media(min-width:930px)]:text-6xl min-[1100px]:text-7xl text-gray-400 opacity-50 hover:text-6xl hover:sm:text-7xl hover:lg:text-8xl ease-in-out
         transition-all duration-300">
         <FaCircleChevronLeft/>
         </button>
-        <button onClick={rightHandler} className="text-[42px] min-[930px]:text-6xl min-[1100px]:text-7xl text-gray-400 opacity-50 hover:text-6xl hover:sm:text-7xl hover:lg:text-8xl 
+        <button onClick={rightHandler} className="text-[42px] [@media(min-width:930px)]:text-6xl min-[1100px]:text-7xl text-gray-400 opacity-50 hover:text-6xl hover:sm:text-7xl hover:lg:text-8xl 
         transition-all ease-in-out duration-300 ">
         <FaCircleChevronRight/>
         </button>

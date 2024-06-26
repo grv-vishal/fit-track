@@ -13,11 +13,11 @@ const NavBar = () => {
   return (
 
     <div className='sticky top-0 z-50'>
-      <div className= {`flex px-4 min-[600px]:px-6 items-center py-3 bg-redPink-1 shadow-lg ${loginState ? "justify-between" : "min-[900px]:justify-evenly justify-between"} `}>
+      <div className= {`flex px-4 [@media(min-width:600px)]:px-6 items-center py-3 bg-redPink-1 shadow-lg ${loginState ? "justify-between" : "[@media(min-width:900px)]:justify-evenly justify-between"} `}>
 
         <div className="flex flex-row justify-center items-center gap-x-5"> 
 
-         <button className={`${loginState ? "flex flex-col gap-y-2" : "flex flex-col gap-y-2 min-[900px]:hidden"}`} onClick={()=>{
+         <button className={`${loginState ? "flex flex-col gap-y-2" : "flex flex-col gap-y-2 [@media(min-width:900px)]:hidden"}`} onClick={()=>{
           if(openDrawer)
             setOpenDrawer(false)
           else
@@ -29,8 +29,8 @@ const NavBar = () => {
         <Link to='/'>
          <div className="flex flex-row justify-center items-center gap-x-2">
           <img src={logo} alt="studyNotion" loading="lazy" 
-           className="rounded-full w-[38px] h-[38px] min-[600px]:w-[45px] min-[600px]:h-[45px]"/>
-          <div className="text-white text-[26px] min-[600px]:text-3xl font-bold">
+           className="rounded-full w-[38px] h-[38px] [@media(min-width:600px)]:w-[45px] [@media(min-width:600px)]:h-[45px]"/>
+          <div className="text-white text-[26px] [@media(min-width:600px)]:text-3xl font-bold">
            Fit-Track
            </div>
          </div>
@@ -40,7 +40,7 @@ const NavBar = () => {
 
 
        <nav>
-        <ul className="hidden min-[900px]:flex justify-center items-center gap-4 lg:gap-5 text-[22px] lg:text-2xl font-semibold text-white">
+        <ul className="hidden [@media(min-width:900px)]:flex justify-center items-center gap-4 lg:gap-5 text-[22px] lg:text-2xl font-semibold text-white">
            <li>
             <Link to="/">Home</Link>
            </li>
@@ -64,7 +64,7 @@ const NavBar = () => {
        </nav>
 
        {!loginState &&
-       <div className="hidden min-[720px]:flex justify-center items-center gap-6 text-white text-xl font-semibold">
+       <div className="hidden [@media(min-width:720px)]:flex justify-center items-center gap-6 text-white text-xl font-semibold">
    
         <Link to="/login">
          <button className="border-white border-2 py-1 px-2 rounded-md hover:bg-white transition-all duration-400
