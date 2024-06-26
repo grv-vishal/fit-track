@@ -157,7 +157,7 @@ const EditActivity = (props) => {
                         value={activity.weight}
                         onChange={handleChange}
                         defaultValue={activity.weight}
-                        className='w-[90px] [400px]:w-[100px] h-[50px] pl-3 py-2'
+                        className='w-[90px] [@media(min-width:400px)]:w-[100px] h-[50px] pl-3 py-2'
                       />
                       </div>
                     </div>

@@ -105,7 +105,7 @@ const AddActivity = (props) => {
                     name="reps"
                     value={activity.reps}
                     onChange={handleChange}
-                    className='w-[90px] min-[400px]:w-[100px] h-[50px]'
+                    className='w-[90px] [@media(min-width:400px)]:w-[100px] h-[50px]'
                     >
                         <MenuItem value={0}>0</MenuItem>
                         <MenuItem value={8}>8</MenuItem>

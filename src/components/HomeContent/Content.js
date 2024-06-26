@@ -29,11 +29,11 @@ const Content = () => {
     <div className='w-full'>
         <div className='flex flex-col justify-center items-center gap-y-3 sm:gap-y-5 py-6 bg-white'>
             <div className='flex flex-wrap justify-center items-center  gap-y-1 sm:gap-y-3 gap-x-2 mx-2 text-redPink-2 
-            text-3xl min-[490px]:text-[42px] min-[990px]:text-5xl font-bold'>
+            text-3xl [@media(min-width:490px)]:text-[42px] [@media(min-width:990px)]:text-5xl font-bold'>
                 <p>Track Your Workouts,</p> 
                 <p> Achieve Your Goals</p>
             </div>
-            <p className=' text-gray-800 text-[12px] min-[370px]:text-sm min-[545px]:text-xl mt-4 mx-2 min-[655px]:text-2xl'>
+            <p className=' text-gray-800 text-[12px] [@media(min-width:370px)]:text-sm [@media(min-width:545px)]:text-xl mt-4 mx-2 [@media(min-width:655px)]:text-2xl'>
             Log your daily exercises and see your progress over time.</p>
 
             {!loginState && 
@@ -51,14 +51,14 @@ const Content = () => {
             Features
           </div>
           <div className='bg-white flex flex-col justify-center items-center gap-y-8 px-10 py-16 mt-4 drop-shadow-md mx-4'>
-            <div className='flex flex-col min-[880px]:flex-row justify-evenly items-center gap-x-2 gap-y-4'>
+            <div className='flex flex-col [@media(min-width:880px)]:flex-row justify-evenly items-center gap-x-2 gap-y-4'>
              <div>
               <img src={loginphone} alt="" loading='lazy' className='w-[250px] sm:w-[300px] xl:w-[400px] h-[300px] sm:h-[400px] xl:h-[500px] hover:scale-105 transition-all duration-300'/>
              </div>
              <div className='max-w-[450px] text-black flex flex-col justify-center items-start'>
-              <h4 className='font-semibold text-[16px] min-[400px]:text-[18px] uppercase text-gray-700'>User Authentication</h4>
-              <h2 className='font-bold uppercase text-xl min-[400px]:text-[22px] min-[550pxpx]:text-2xl pb-3'>Secure Sign-up and Login</h2>
-              <p className='text-[15px] min-[400px]:text-[16px] min-[550px]:text-[18px]'>Provides a secure and personalized experience through robust user authentication features 
+              <h4 className='font-semibold text-[16px] [@media(min-width:400px)]:text-[18px] uppercase text-gray-700'>User Authentication</h4>
+              <h2 className='font-bold uppercase text-xl [@media(min-width:400px)]:text-[22px] [@media(min-width:550px)]:text-2xl pb-3'>Secure Sign-up and Login</h2>
+              <p className='text-[15px] [@media(min-width:400px)]:text-[16px] [@media(min-width:550px)]:text-[18px]'>Provides a secure and personalized experience through robust user authentication features 
                 that allows users to safely create and manage their accounts. It also provides a password recovery option 
                 in case users forget their password.
               </p>
@@ -67,8 +67,8 @@ const Content = () => {
 
             <div className='flex flex-col-reverse [@media(min-width:880px)]:flex-row justify-evenly items-center gap-x-2 gap-y-4'>
              <div className='max-w-[450px] text-black flex flex-col justify-center items-start'>
-              <h4 className='font-semibold text-[16px] min-[400px]:text-[18px] uppercase text-gray-700'>Real-Time Updates</h4>
-              <h2 className='font-bold uppercase text-xl min-[400px]:text-[22px] min-[550px]:text-2xl pb-3'>Comprehensive Workout Logging</h2>
+              <h4 className='font-semibold text-[16px] [@media(min-width:400px)]:text-[18px] uppercase text-gray-700'>Real-Time Updates</h4>
+              <h2 className='font-bold uppercase text-xl [@media(min-width:400px)]:text-[22px] [@media(min-width:550px)]:text-2xl pb-3'>Comprehensive Workout Logging</h2>
               <p className='text-[15px] [@media(min-width:400px)]:text-[16px] [@media(min-width:550px)]:text-[18px]'>Allows users to log daily workouts with detailed exercises, sets, reps, and weights and
                 view summaries of their recent workouts and fitness goals,
                 ensuring that their personal data and workout informations are securely encrypted and stored.
